@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/heayer1.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fomm.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/search.css"/>
+	</head>
+	<body>
+		<div id="nav"></div>
+		<div class="index">
+			<div class="py-3 d-flex justify-content-start tbody-w m-auto">
+				<a class="font_12" href="javascript:;">全部结果 ></a>
+				<span id="quanbu" class="font_12 ml-2">"还不晓得"</span>
+			</div>
+			<ul class="list-unstyled font_12 tbody-w px-4">
+				<li class="border-bottom">
+					<span>分类：</span>
+					<a id="fennei" class="font_12 ml-5 text-danger font-weight-bold" href=""></a>
+				</li>
+				<li class="border-bottom">
+					<span>价格区间：</span>
+					<input class="ml-4" type="checkbox" name='nav'><span>0-3699</span>
+					<input class="ml-4" type="checkbox" name='nav'><span>3699-5499</span>
+					<input class="ml-4" type="checkbox" name='nav'><span>5499-8991</span>
+				</li>
+				<li>
+					<span>排序：</span>
+					<a class='font_12 ml-5 text-danger' href="">综合</a>
+					<a class='font_12 ml-5' href="">最新</a>
+					<a class='font_12 ml-5' href="">热度</a>
+					<a class='font_12 ml-5' href="">价格</a>
+				</li>
+			</ul>
+			<div class="tbody-w navbar_w ml-2">
+				<ul id="btnul" class="list-unstyled d-flex flex-wrap xiaoq">
+					
+				</ul>
+			</div>
+			<iframe class="iframe_2" src="footer.html" width="" height=""></iframe>
+		</div>
+		<script>
+			var $div=document.getElementById("nav")
+				$div.innerHTML=`
+					<div class="navbar_n">
+						<div class="box d-flex justify-content-center">
+							<div class="d1 nav_1 ">
+								<ul class="list-unstyled d-flex mb-0">
+									<li class='mx-2'><a target="_blank" href="index_1.html">首页</a></li>
+									<li class='mx-2'><a href="">华为官网</a></li>
+									<li class='mx-2'><a href="">荣耀官网</a></li>
+									<li class='mx-2'><a href="">花粉俱乐部</a></li>
+									<li class='mx-2'><a href="">V码(优购码)</a></li>
+									<li class='mx-2'><a href="">企业购</a></li>
+									<li class='mx-2'><a href="">Select Region</a></li>
+									<li class='mx-2'><a href="">更多精彩<i class="iconfont">&#xe60c;</i></a></li>
+								</ul>
+							</div>
+							<div class="d2 nav_2">
+								<ul class="list-unstyled d-flex mb-0">
+									<li class='mx-2'><a href="">请登录</a></li>
+									<li class='mx-2'><a href="dengku.html"> 注册</a></li>
+									<li class='mx-2'><a href="">我的订单</a></li>
+									<li class='mx-2'><a href="">客户服务<i class="iconfont">&#xe60c;</i></a></li>
+									<li class='mx-2'><a href="">网站导航<i class="iconfont">&#xe60c;</i></a></li>
+									<li class='mx-2'><a href="">手机版<i class=" iconfont">&#xe60c;</i></a></li>
+									<li class='mx-2'><a href=""><i class="iconfont">&#xe63f;</i>购物车</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="index">
+						<div class="box_cen">
+							<ul class="list-unstyled d-flex w1206_">
+								<li class="li1"><a href=""><img src="image/huaweishaocheng.png" alt=""></a></li>
+								<li class="li2 mr-4"><a href=""><img class="" src="image/huaweifenqu.png" alt=""></a></li>
+								<li class="li2 mr-4"><a href=""><img src="image/rongyaozhuanqu.png" alt=""></a></li>
+								<li class='nav_box mr-4'><a href="index.html" target="_blank">华为 P40 系列</a></li>
+								<li class='nav_box mr-4'><a href="">荣耀30系列</a></li>
+								<li class='nav_box mr-5'><a href="">安心居家</a></li>
+								<li class="input_ my_input">
+									<input id="input" type="text" AUTOCOMPLETE="OFF">
+									<div>
+										<a class="font_12 text-muted" href="javascript:;">p40</a>
+										<a class="font_12 ml-1 text-muted" href="">荣耀30</a>
+										<a onclick="input_value_btn()" class="ml-2 text-muted" href="javascript:;"><i class="iconfont">&#xe60f;</i></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				`;
+			//获取input	
+			var $input=document.getElementById('input');
+			//获取上一个页面添砖时带过来的url查询字符串
+			//location.href    获取完整的url地址
+			//    search 获取到？后i面的所有内容
+			var oo=location.search;
+			//把oo的值按逗号分隔
+			oo=oo.split('=');
+			// console.log(oo)
+			//分割后返回的值是数组
+			//["?input_name", ""]
+			//oo[1]就是url地址上的查询内容
+			// console.log(oo[1])
+			//因为通过地址栏传递的数据中文会乱码
+			//即通过这个东西转为中文
+			var title = decodeURI(oo[1]);
+			console.log(title)
+			fennei.innerHTML=title;//如果在该网页中搜索的内容，就把内容放到分类的标签中
+			quanbu.innerHTML=title;
+			if(title!=''){
+				input_value(title)
+			};
+			//判断a标签在点击触发事件的时候，判断一下input的值是否为空，如果为空就直接
+			//跳出函数，不让执行
+			function input_value_btn(){
+				if($input.value==''){
+					return
+				}else{
+					input_value()
+				}
+			}
+			function input_value(){
+				// console.log($input.value)
+				//创建异步函数
+				var xhr=new XMLHttpRequest();
+				//创建请求地址和和请求方法      true 是否异步发送
+				if(arguments.length>0){
+					//如果在该网页中搜索的内容，就把内容放到分类的标签中
+					xhr.open('GET',`/hw_user/bjb/${arguments[0]}`,true);
+					console.log('123')
+				}else{
+					console.log('234')
+					xhr.open('GET',`/hw_user/bjb/${$input.value}`,true);
+					fennei.innerHTML=$input.value;
+					quanbu.innerHTML=$input.value;
+				};
+				//发送请求
+				xhr.send(null);
+				//接收请求
+				xhr.onreadystatechange=()=>{
+					if(xhr.readyState==4&&xhr.status==200){
+						
+						var r=xhr.responseText;
+						r=JSON.parse(r);
+						console.log(r)
+						
+						var ul=document.getElementById('btnul')
+						var ul_li='';
+						if(r.length>0){
+							
+							for(var i=0;i<r.length;i++){
+								ul_li+=`<li>
+									<a href="">
+										<p class="m-0 pt-4 text-center"><img src="image/${r[i].bj_img}" alt=""></p>
+										<p class="font_12 mb-1 ml-3">${r[i].title}</p>
+										<p class="ml-3 mb-1">
+											<span class="font_18 text-danger">¥${r[i].preay.toFixed(2)}</span>
+											<span class="font_12 px-1 span-border">多款可选</span>
+										</p>
+										<p class="ml-3 font_12 mb-1">
+											<span class="text-danger border border-danger">限时特价</span>
+											<span class="text-danger border border-danger">一站式换新</span>
+										</p>
+										<p class="ml-3 font_12 text-muted">
+											<span>
+												<span>1200</span>
+												人评价
+											</span>
+											<span class="ml-2">
+												<span>80%</span>
+												好评
+											</span>
+										</p>
+									</a>
+								</li>`
+							};
+						}else{
+							ul_li+=`<li class="weicen text-center">
+								<p><img src="image/shousuo.jpg" alt=""></p>
+								<p><span>未搜索到相关内容</span></p>
+							</li>`;
+						};
+										
+						ul.innerHTML=ul_li;			
+					}
+				}
+			}
+			//键盘事件                e是键盘事件对象
+			document.onkeydown=function(e){
+				//用e.keyCode 获取键盘的值
+				var key=e.keyCode
+				//此时此刻key得到的就是用户按下的键了
+				if(key==13&&$input.value){
+					input_value()
+				}
+			}
+		</script>
+	</body>
+</html>

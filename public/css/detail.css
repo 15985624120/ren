@@ -1,0 +1,143 @@
+iframe{
+	width: 100%;
+	box-shadow: 0 2px 26px rgba(0,0,0,0.07);
+	height: 125px;
+	/* 设置元素不被选中 */
+	user-select: none;
+}
+.index{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+body{
+	height: 1500px;
+}
+
+.nav_title{
+	width: 1220px;
+}
+.datout{
+	width: 450px;
+	height: 450px;
+}
+.d_w450{
+	width: 450px;
+	position: relative;
+}
+.posand_flex{
+	transition: all 1s;
+	position: fixed;
+	top: 0px;
+}
+.posand_flex1{
+	position: absolute;
+	bottom: 10px;
+}
+/* 放大镜 */
+.fang{
+	position: relative;
+}
+.fang .div1{
+	position: absolute;
+	display: none;
+	top: 0;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #ddd;
+	background: rgba(255,255,255,0.5);
+}
+.fang .div2{
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 460px;
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	background: rgba(255,255,255,0.5);
+}
+.fang .div2 img{
+	width: 1000px;
+	height: 1000px;
+}
+.p_img img{
+	width: 60px;
+	height: 60px;
+}
+.p_img a:nth-child(1),a:nth-child(7){
+	display: inline-block;
+	width: 38px;
+	line-height: 30px;
+	text-align: center;
+	border: #000;
+	border: 2px solid #ddd;
+	border-radius: 50%;
+}
+.p_img a i{
+	color: #ddd;
+}
+
+.you_w{
+	width: 700px;
+}
+.font-21{
+	font-size: 21px;
+}
+.nav_bar{
+	background: #f5f5f5;
+}
+.mb_4{
+	margin-bottom: 20px;
+}
+.ml_5{
+	margin-left: 80px;
+}
+/*  */
+
+/*  */
+.btn_wh{
+	width: 24px;
+	height: 24px;
+}
+.input_wh{
+	width: 42px;
+	height: 48px;
+	font-size: 16px;
+	text-align: center;
+	outline: none;
+	border: 1px solid #ddd;
+	border-right-color: transparent;
+}
+.bg-f5{
+	background: #f5f5f5;
+}
+.bg-fc{
+	width: 172px;
+	height: 46px;
+	color: #fff;
+	background: #fc600c;
+}
+.bg-ca{
+	width: 172px;
+	height: 46px;
+	color: #fff;
+	background: #ca151d;
+}
+.tbody_a a{
+	font-size: 18px;
+	margin: 0 25px;
+}
+
+/*  */
+.tbody_img img{
+	width: 1300px;
+}
+.border_bottom{
+	display: inline-block;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	border-bottom: 2px solid red;
+}

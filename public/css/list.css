@@ -1,0 +1,63 @@
+a{
+	text-decoration: none;
+	color: #007dff;
+}
+a:hover{text-decoration: none;}
+.index{
+	display: flex; 
+	flex-direction: column;align-items: center;
+}
+.font_12{
+	font-size: 12.8px;
+}
+.daohang{
+	width: 100%;
+	
+	background: #f2f2f2;
+}
+.img_box{
+	align-items: stretch;
+	line-height:38.5px ;
+	margin-left: 10%;
+}
+.h4{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.list .img{
+	width: 288px;
+	height: 233px;
+	
+}
+.shuxian{
+	height: 233px;
+	
+	border: 1px solid #f2f2f2;
+}
+.my_input input{
+	padding: 0 10px 0 10px;
+	width: 285px;
+	height: 34px;
+	font-size: 12px;
+	background: #f2f2f2;
+	border-radius: 10px;
+	outline: #005CBF;
+	border: 1px solid #005CBF;
+}
+.my_input [type='button']{
+	background: #ca141d;
+	outline: none;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+.my_img img{
+	width: 20px;
+}
+.hbiou{
+	width: 100%;
+	background: #f2f2f2;
+}
+.href a{
+	color: #000000;
+}

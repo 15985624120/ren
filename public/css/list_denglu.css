@@ -1,0 +1,110 @@
+*{
+	box-sizing: border-box;
+}
+.index{
+	/* display: flex; 
+	flex-direction: column;align-items: center; */
+}
+.font_12{
+	font-size: 12.8px;
+}
+.font_14{font-size: 14px;}
+.daohang{
+	width: 100%;
+	
+	background: #f2f2f2;
+}
+.img_box{
+	align-items: stretch;
+	line-height:38.5px ;
+	margin-left: 11.5%;
+}
+/*  */
+.zhuche{
+	margin-left: 11.5%;
+	
+}
+.zhuche div:nth-child(1){
+	/* margin-left: -100px; */
+}
+.txt p{
+	width: 217px;
+	line-height: 40px;
+	border-radius: 4px;
+}
+.txt p:nth-child(1){
+	background: #f2f2f2;
+}
+.txt p:nth-child(2):hover{
+	background: #f2f2f2;
+}
+.txt p a{color: #000;}
+.my_input_1{
+	margin-left: 120px;
+}
+.my_input_1 div~p{
+	width: 345px;
+	line-height: 40px;
+	background: #f2f2f2;
+	padding-left: 18px;
+	border-radius: 5px;
+}
+.my_input_1 p input{
+	height: 35px;
+	font-size: 14px;
+	
+	border: none;
+	outline: none;
+	background: transparent;
+}
+.my_input_1 .nav{width: 345px;
+	margin-left: 12.5%;
+}
+.my_input_1 .nav>button{
+	width: 249px;
+	height: 40px;
+	background: #007dff;
+	border: none;
+	outline: none;
+}
+/*  */
+.hbiou{
+	width: 100%;
+	background: #f2f2f2;
+}
+.href a{
+	color: #000000;
+}
+/* 下拉�*/
+.xiala{
+	width: 51px;
+	height: 33px;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+.xiala_1{
+	width: 90px;	
+}
+.select_1,.select_2,.select_3{
+	font-size: 14px;
+	height: 33px;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+.select_2,.select_3{
+	width: 45px;
+}
+.dianj{
+	border: 1px solid transparent;
+}
+.dianj:hover{
+	
+	border: 1px solid #005CBF;
+}
+.box__{color: #fff;}
+.box__:hover{
+	background: #005CBF;
+	clear: #fff;
+}

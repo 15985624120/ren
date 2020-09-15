@@ -1,0 +1,58 @@
+{
+  "id": "1981037",
+  "name": "hw",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "508247",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "810222",
+      "name": "箭头",
+      "font_class": "jiantou-copy-copy-copy",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "13409706",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "356490",
+      "name": "支付宝",
+      "font_class": "zhifubao",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "429883",
+      "name": "QQ",
+      "font_class": "logo-qq",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "986196",
+      "name": "qq",
+      "font_class": "qq-copy",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "5571218",
+      "name": "微信",
+      "font_class": "icon-test",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    }
+  ]
+}

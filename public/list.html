@@ -1,0 +1,138 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fomm.css"/>
+		<script type="text/javascript">
+			function sjyz(){//手机号码正则
+				var $sj=sj.value;
+				var reg=/^1[3-9]\d{9}$/;
+				var result=reg.test($sj);
+				if(result!==true){
+					span1.innerHTML='手机号码格式不正确'
+					span1.style='border-radius:5px; color:#fff;font-size:12px;background:red; padding:2px 10px;'			
+					return ;
+				}else{span1.innerHTML=''
+					span1.style='background:#fff; '}
+			}
+			function sjyz2(){//失去焦点的正则
+				var $mi2=mi2.value;
+				var reg2=mi2.value.search(/(^ +| +$,'')/g);
+				var reg3=mi2.value.search(/^[a-z0-9]\d{8,16}/g);
+				if(reg3!=-1){
+					span3.innerHTML='密码格式不正确'
+					span3.style='border-radius:5px; color:#fff;font-size:12px;background:red; padding:2px 10px;'
+					// console.log(1);
+					return;
+				}else if(reg2!=-1){
+ 					span3.innerHTML='不能含有空字符'
+					span3.style='border-radius:5px; color:#fff;font-size:12px;background:red; padding:2px 10px;'
+					// console.log(1);
+					return;
+				}else{span3.innerHTML=''
+					span3.style='background:#fff; '}
+			}
+			//提交数据
+			function fct(){
+				var uname=sj.value;
+				var upwd=mi2.value;
+				//验证账号是否存在
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=()=>{
+					
+					if(xhr.readyState==4&&xhr.status==200){
+						var r=xhr.responseText;
+						if(r==0){
+							span1.innerHTML='你的账号不存在'
+							span1.style='border-radius:5px; color:#fff;font-size:12px;background:red; padding:2px 10px;'	
+							return ;
+						}else{
+							fub()
+						}
+					}
+				}
+				xhr.open('GET',`/hw_user/v1/user/${uname}`,true)
+				xhr.send(null)
+				
+				//提交账号密码
+				function fub(){
+					// console.log(uname,upwd)
+					var xhr=new XMLHttpRequest();
+					xhr.onreadystatechange=()=>{
+						
+						if(xhr.readyState==4&&xhr.status==200){
+							var r=xhr.responseText;
+							if(r==1){
+								alert('登录成功')
+								location.href='index_1.html'
+							}else{
+								alert('账号或密码错误')
+							}
+						}
+					}
+					xhr.open('GET',`/hw_user/v1/user_name/${uname}&${upwd}`,true)
+					xhr.send(null)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="index">
+			<div class="daohang">
+				<div class="img_box d-flex">
+					<img src="image/list/HUAWEI.svg" alt="">
+					<span class="mx-3">|</span>
+					<span class="font_12 font-weight-bold">华为商城</span>
+				</div>
+			</div>	
+			<div class="h4">华为帐号登录</div>
+			<div class="d-flex list">
+				<div class="img ">
+					<div class="text-center text_ mb-5"><img src="image/list/下载.png" alt=""></div>
+					<spna class='font_12 text'>您使用华为手机，请进入“设置”>“华为帐号”扫码登录。</spna>
+				</div>
+				<div class="shuxian mx-5"></div>
+				<div class="my_input">
+					<p class="mb-2"><input onblur='sjyz()' onfocus='fub()' id="sj" type="text" placeholder="手机号/邮件地址/华为号" maxlength="11"></p>
+					<span id="span1" class="font_12" style="padding: 3px 2px;"></span>
+					<p class="mt-2"><input onblur='sjyz2()' onfocus='fub2()'   id="mi2" type="password" placeholder="密码"></p>
+					<span id="span3" class="" style="color: red;"></span>
+					<p><a href="">短信验证码登录</a></p>
+					<p><input onclick='fct()' type="button" value="登录"></p>
+					<p class="text-center tetx_">
+						<a href="dengku.html">注册</a>
+						<span class="text-muted mx-2">|</span>
+						<a href="">忘记密码</a>
+						<span class="text-muted mx-2">|</span>
+						<a href="">更多</a>
+					</p>
+					<p class="my_img text-center">
+						<a href=""><img class="mx-4" src="image/list/qq.svg" alt=""></a>
+						
+						<a href=""><img class="mx-4" src="image/list/zfb.svg" alt=""></a>
+						<a href=""><img class="mx-4" src="image/list/wx.png" alt=""></a>
+					</p>
+				</div>
+			</div>
+			<div class="pt-4 hbiou">
+				<p class="text-center href">
+					<a class="font_12" href="">华为帐号与云空间用户协议</a>
+					<span class="mx-2 text-muted">|</span>
+					<a class="font_12" href="">关于华为帐号与云空间隐私的声明</a>
+					<span class="mx-2 text-muted">|</span>
+					<a class="font_12" href="">常见问题</a>
+					<span class="mx-2 text-muted">|</span>
+					<a class="font_12" href="">Cookies</a>
+				</p>
+				<p class="font_12 text-center text-muted">Copyright © 2011-2020  华为软件技术有限公司  版权所有  保留一切权利  苏B2-20070200号 | 苏ICP备09062682号-9</p>
+			</div>
+		</div>
+	</body>
+</html>
